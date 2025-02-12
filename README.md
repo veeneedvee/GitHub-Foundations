@@ -1,9 +1,10 @@
 # GitHub-Foundations
-It is a repo for GitHub Foundations practice.
-## Git hidden folder
-There is a hidden folder in all the repos, called `.git` to indicated that it is a Git ptoject.
+It is a repo for GitHub Foundations practice. I am going to make a wonderful help doc that can be useful for anyone who wants to learn basic Git commands.
 
-To create a git repo in our new project, you can use `git inti` command to initialise the git enviroment in that repo.
+## Git hidden folder
+There is a hidden folder in all the repos, called `.git` to indicated that it is a Git project.
+
+To create a git repo in our new project, you can use `git inti` command to initialize the git environment in that repo.
 
 ```sh
 mkdir /workspaces/temp/new-project
@@ -53,7 +54,7 @@ ssh git@github.com:veeneedvee/GitHub-Foundations.git
 ```
 
 ### GitHub CLI
-To clone the respository using GitHub CLI, run the command:
+To clone the repository using GitHub CLI, run the command:
 ```sh
 gh repo clone veeneedvee/GitHub-Foundations
 ```
