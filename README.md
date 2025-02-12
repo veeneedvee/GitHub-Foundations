@@ -59,4 +59,30 @@ To clone the repository using GitHub CLI, run the command:
 gh repo clone veeneedvee/GitHub-Foundations
 ```
 
+## Git Push
+To push your changes from a local machine to a remote repo in GitHub, you need to link to that remote repo.
+
+### When not linked
+When you are not linked with the remote repo, then you can perform the following steps:
+
+1. Firs, add the remote repo URL:
+   
+   ```sh
+   git remote add origin https://github.com/veeneedvee/GitHub-Foundations.git
+   ```
+
+2. Next, push the changes:
+   
+   ```sh
+   git push -u origin main
+   ```
+
+### When linked
+When you already linked to the remote repo, you can directly push the code changes.
+
+```sh
+git push origin main # or `git push origin master` if the main branch is named master
+```
+
+
 
