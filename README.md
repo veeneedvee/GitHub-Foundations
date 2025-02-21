@@ -84,5 +84,44 @@ When you already linked to the remote repo, you can directly push the code chang
 git push origin main # or `git push origin master` if the main branch is named master
 ```
 
+### Install and configure GitHub CLI
+We can use GitHub CLI to communicate with GitHub service and our local machine.
+
+#### Install GitHub CLI on Mac machines
+To install GitHub CLI, run the following Homebrew command:
+```
+brew install gh
+```
+
+You can also download directly from the website and install the package (_.pkg_) file.
+* Go to: [GitHub CLI Releases](https://github.com/cli/cli/releases)
+* Download the `.pkg` file for macOS and install it.
+
+#### Verify installation
+
+After installation, check if gh is installed by running:
+```
+gh --version
+```
+
+#### Authenticate with GitHub
+To connect GitHub CLI with your GitHub account:
+```
+gh auth login
+```
+
+To verify the authentication status, run:
+```
+gh auth status
+```
+
+#### Clone a repo using GitHub CLI
+To clone a repo using GitHub CLI, run:
+```
+gh repo clone <repo-owner>/<repo-name>
+```
+
+
+
 
 
