@@ -121,6 +121,31 @@ To clone a repo using GitHub CLI, run:
 gh repo clone <repo-owner>/<repo-name>
 ```
 
+## Git Branches
+To list all the branches in a repo, run:
+```
+git branch
+```
+
+To create a new branch named `dev`, run:
+```sh
+git branch dev
+```
+
+To switch to the new branch named `dev`, run:
+```sh
+git checkout dev
+```
+
+After making changes to the files, you can push those changes by running the following command:
+```sh
+git push -u origin dev
+```
+
+## Git Merging
+
+
+
 
 
 
