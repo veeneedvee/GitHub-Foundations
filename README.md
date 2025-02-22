@@ -145,6 +145,68 @@ git push -u origin dev
 ## Git Merging
 
 
+## Git Stash
+Sometimes you might need to keep aside your uncommitted changes and work on some other project. In that case, you can use the `git stash` feature to keep the uncommitted changes some where and then bring them back when required.
+
+To stash the uncommitted changes to currently working branch, run:
+```sh
+git stash
+```
+
+You can give a name to it for easy identification from a huge list of stashed items.
+```sh
+git stash save ChangesREADME
+```
+
+To know the list of all stashed items, run:
+```sh
+git stash list
+```
+
+To reapply the most recently stashed changes without removing them from the stash, run:
+```sh
+git stash apply
+```
+
+If you have multiple stashes, you can apply a specific one using its index:
+```sh
+git stash apply stash@{2}
+```
+
+To get back the stashed items back to the terminal, run:
+```sh
+git stash pop
+```
+
+If you have multiple stashes, you can apply and remove a specific stash using:
+```sh
+git stash pop stash@{2}
+```
+
+## Git Branches
+To list all the branches in a repo, run:
+```
+git branch
+```
+
+To create a new branch named `dev`, run:
+```sh
+git branch dev
+```
+
+To switch to the new branch named `dev`, run:
+```sh
+git checkout dev
+```
+
+After making changes to the files, you can push those changes by running the following command:
+```sh
+git push -u origin dev
+```
+
+## Git Merging
+
+
 
 
 
