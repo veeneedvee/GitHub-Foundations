@@ -36,7 +36,7 @@ Docusaurus is a powerful open-source documentation site generator.
 ### 📌 Steps to Set Up Your Portfolio
 1. Install Docusaurus
 
-```
+```sh
 npx create-docusaurus@latest my-portfolio classic
 cd my-portfolio
 npm run start
@@ -53,13 +53,13 @@ Edit `src/pages/index.js` with your portfolio content.
 
 4. Deploy on GitHub Pages
 
-```
+```sh
 GIT_USER=<YourGitHubUsername> USE_SSH=true npm run deploy
 ```
 
 ### 📌 Sample Portfolio Content (src/pages/index.js)
 
-```
+```jsx
 import React from 'react';
 
 export default function Home() {
@@ -93,7 +93,7 @@ Swagger UI helps create interactive API documentation.
 
 1. Create an OpenAPI YAML File (api-docs.yaml)
 
-```
+```yaml
 openapi: 3.0.0
 info:
   title: My API Portfolio
@@ -134,20 +134,20 @@ MkDocs is a lightweight static site generator for documentation.
 
 1. Install MkDocs
 
-```
+```sh
 pip install mkdocs
 ```
 
 2. Create a New MkDocs Project
 
-```
+```sh
 mkdocs new my-portfolio
 cd my-portfolio
 ```
 
 3. Modify `mkdocs.yml` (Configuration File)
 
-```
+```yaml
 site_name: "[Your Name] - Technical Writing Portfolio"
 nav:
   - Home: index.md
@@ -160,7 +160,7 @@ theme:
 
 4. Add Portfolio Content (`docs/index.md`)
 
-```
+```md
 # 👋 Hi, I'm [Your Name]
 ## 📝 Technical Writer | API Docs | DevOps Docs
 - [API Documentation](api-docs.md)
@@ -170,14 +170,179 @@ theme:
 
 5. Run the Local Server
 
-```
+```sh
 mkdocs serve
 ```
 
 6. Deploy on GitHub Pages
 
-```
+```sh
 mkdocs gh-deploy
 ```
 
 🔗 Live Example → https://squidfunk.github.io/mkdocs-material/
+
+Here are Docusaurus and MkDocs portfolio templates tailored for Technical Writers. These templates will help you build a structured portfolio showcasing your documentation skills.
+
+## 📌 Docusaurus Portfolio for Technical Writers
+Docusaurus is a great choice if you want an interactive, well-structured documentation website.
+
+### 🚀 Steps to Set Up
+
+1. Install Docusaurus
+
+```sh
+npx create-docusaurus@latest my-portfolio classic
+cd my-portfolio
+npm run start
+```
+
+2. Modify Homepage (`src/pages/index.js`)
+
+```jsx
+import React from 'react';
+import Layout from '@theme/Layout';
+
+export default function Home() {
+  return (
+    <Layout title="Technical Writing Portfolio">
+      <div style={{ textAlign: 'center', padding: '50px' }}>
+        <h1>🚀 Welcome to My Portfolio</h1>
+        <p>I specialize in API documentation, developer guides, and user manuals.</p>
+        <a href="/docs">View My Work</a>
+      </div>
+    </Layout>
+  );
+}
+```
+
+3. Create a Portfolio Section (`docs/portfolio.md`)
+
+```md
+# 📌 Technical Writing Portfolio
+
+## 🔹 API Documentation
+- [REST API Docs](api-docs/rest-api)
+- [GraphQL API Docs](api-docs/graphql)
+
+## 🔹 User Guides
+- [Software Installation Guide](guides/software-installation)
+- [Feature Walkthroughs](guides/feature-walkthrough)
+
+## 🔹 Knowledge Base Articles
+- [Troubleshooting Common Issues](kb/troubleshooting)
+- [Best Practices for Documentation](kb/best-practices)
+
+## 🔹 Contact
+📧 Email: your.email@example.com  
+🔗 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)  
+🌐 Portfolio: [Your Website](https://yourportfolio.com)
+```
+
+4. Add Navigation to `sidebars.js`
+
+```js
+module.exports = {
+  sidebar: [
+    {
+      type: 'category',
+      label: 'Portfolio',
+      items: ['portfolio'],
+    },
+  ],
+};
+```
+
+5. Deploy to GitHub Pages
+
+```sh
+GIT_USER=<YourGitHubUsername> USE_SSH=true npm run deploy
+```
+
+👉 Live Example: Docusaurus Showcase
+
+## 📌 MkDocs Portfolio for Technical Writers
+
+MkDocs is a lightweight, Markdown-based documentation framework.
+
+### 🚀 Steps to Set Up
+
+1. Install MkDocs
+
+```sh
+pip install mkdocs
+```
+
+2. Create a New Project
+
+```sh
+mkdocs new my-portfolio
+cd my-portfolio
+```
+
+3. Modify Configuration (`mkdocs.yml`)
+
+```yaml
+site_name: "Technical Writing Portfolio"
+theme: material
+nav:
+  - Home: index.md
+  - Portfolio:
+      - API Documentation: api-docs.md
+      - User Guides: user-guides.md
+      - Knowledge Base: knowledge-base.md
+  - Contact: contact.md
+```
+
+4. Edit Homepage (docs/index.md)
+
+```md
+# 🚀 Welcome to My Portfolio
+
+## 🔹 About Me
+I am a Technical Writer specializing in API documentation, developer guides, and knowledge bases.
+
+## 🔹 My Work
+- [API Documentation](api-docs.md)
+- [User Guides](user-guides.md)
+- [Knowledge Base](knowledge-base.md)
+
+## 🔹 Contact
+📧 Email: your.email@example.com  
+🔗 [LinkedIn](https://linkedin.com/in/yourprofile) 
+```
+
+5. Create API Documentation Page (`docs/api-docs.md`)
+
+```md
+# 📌 API Documentation Samples
+
+## 🔹 REST API
+- [Authentication API](rest-authentication.md)
+- [User Management API](rest-users.md)
+
+## 🔹 GraphQL API
+- [Query Example](graphql-query.md)
+- [Mutation Example](graphql-mutation.md)
+```
+
+6. Run Local Server
+
+```sh
+mkdocs serve
+```
+
+Open __http://127.0.0.1:8000/__ in your browser.
+
+7. Deploy to GitHub Pages
+
+```sh
+mkdocs gh-deploy
+```
+
+👉 Live Example: MkDocs Material Theme
+
+💡 Which One Should You Use?
+* _Docusaurus_ → Best for an interactive and professional-looking documentation website.
+* _MkDocs_ → Best for a lightweight, Markdown-based portfolio that’s easy to maintain.
+
