@@ -342,7 +342,125 @@ mkdocs gh-deploy
 
 👉 Live Example: MkDocs Material Theme
 
+
+## 📌 Asciidoc Portfolio for Technical Writers
+
+Asciidoc is widely used in Antora, GitHub Pages, and DocBook. Below is a structured portfolio template.
+
+### 🚀 Steps to Set Up
+
+1. Install Asciidoc (if not already installed)
+
+```sh
+sudo apt install asciidoc   # Linux
+brew install asciidoc       # macOS
+```
+
+2. Create a Portfolio File (`portfolio.adoc`)
+
+```asciidoc
+= Technical Writing Portfolio
+Your Name <your.email@example.com>
+:toc: macro
+:toc-title: Table of Contents
+
+toc::[]
+
+== 🔹 About Me
+I am a Technical Writer specializing in API documentation, developer guides, and knowledge bases.
+
+== 🔹 My Work
+* xref:api-docs.adoc[API Documentation]
+* xref:user-guides.adoc[User Guides]
+* xref:knowledge-base.adoc[Knowledge Base]
+
+== 🔹 Contact
+* 📧 Email: your.email@example.com
+* 🔗 LinkedIn: https://linkedin.com/in/yourprofile
+* 🌐 Portfolio: https://yourportfolio.com
+```
+
+3. Create an API Documentation Page (`api-docs.adoc`)
+
+```asciidoc
+= API Documentation
+
+== 🔹 REST API
+* xref:rest-authentication.adoc[Authentication API]
+* xref:rest-users.adoc[User Management API]
+
+== 🔹 GraphQL API
+* xref:graphql-query.adoc[Query Example]
+* xref:graphql-mutation.adoc[Mutation Example]
+```
+
+4. Convert Asciidoc to HTML
+
+```sh
+asciidoctor portfolio.adoc
+```
+
+This generates `portfolio.html`, which you can open in a browser.
+
+5. Publish to GitHub Pages
+
+    * Upload the portfolio.html file to a GitHub repository.
+    * Enable GitHub Pages in repository settings.
+
+👉 Live Example: [Asciidoc Example]()
+
+## 📌 Wikitext Portfolio for Technical Writers
+
+Wikitext is used in MediaWiki, Confluence, and Wiki-based documentation systems.
+
+### 🚀 Steps to Set Up
+
+1. Create Portfolio Page (`Portfolio.wiki`)
+
+```wikitext
+= Technical Writing Portfolio =
+'''Your Name''' <your.email@example.com>
+
+== 🔹 About Me ==
+I am a Technical Writer specializing in API documentation, developer guides, and knowledge bases.
+
+== 🔹 My Work ==
+* [[API Documentation]]
+* [[User Guides]]
+* [[Knowledge Base]]
+
+== 🔹 Contact ==
+* 📧 Email: your.email@example.com
+* 🔗 [https://linkedin.com/in/yourprofile LinkedIn]
+* 🌐 [https://yourportfolio.com Portfolio]
+```
+
+2. Create API Documentation Page (`API_Documentation.wiki`)
+
+```wikitext
+= API Documentation =
+
+== 🔹 REST API ==
+* [[Authentication API]]
+* [[User Management API]]
+
+== 🔹 GraphQL API ==
+* [[Query Example]]
+* [[Mutation Example]]
+```
+
+3. Host on MediaWiki or Confluence
+
+    * Copy-paste the Wikitext into your __MediaWiki-based documentation system__ or __Confluence Wiki__.
+    * Save and navigate to the pages.
+
+👉 Live Example: MediaWiki Formatting
+
+
+
 💡 Which One Should You Use?
 * _Docusaurus_ → Best for an interactive and professional-looking documentation website.
 * _MkDocs_ → Best for a lightweight, Markdown-based portfolio that’s easy to maintain.
+* _Asciidoc_ → Best for structured documentation in Antora, GitHub Pages, and DocBook.
+* _Wikitext_ → Best for documentation in MediaWiki, Confluence, and Atlassian products.
 
