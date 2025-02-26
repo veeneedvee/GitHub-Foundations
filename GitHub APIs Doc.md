@@ -39,8 +39,9 @@ POST `https://api.github.com/user/repos`
 
 #### Request Body Parameters
 
-|-----|-----|-----|
+
 |Parameter|Type|Description|
+|-----|-----|-----|
 |name|string|Repository name|
 |description|string|Short description of the repository|
 |private|boolean|`true` for a private repo, `false` for public|
