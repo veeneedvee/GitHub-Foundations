@@ -207,6 +207,20 @@ If you have multiple stashes, you can apply and remove a specific stash using:
 git stash pop stash@{2}
 ```
 
+## Tagging
+
+* It is used to capture a point in history to marked version release of your codebase.
+* CI/CD pipelines may be configured to deploy on the presence of a new tag on production branch.
+* Common Git tagging commands:
+```sh
+git tag v1.0.0 # tag a commit
+git push --tags # Push tags to remote
+git checkout v1.0.0 # Checkout codebase at tag
+git tag -d v1.0.0 # Delete local tag
+git push --delete origin tagname # Delete remote tag
+```
+
+
 
 
 
