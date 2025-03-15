@@ -169,6 +169,7 @@ git push -u origin dev
 
 ## Git Merging
 
+
 ## Git Stash
 Sometimes you might need to keep aside your uncommitted changes and work on some other project. In that case, you can use the `git stash` feature to keep the uncommitted changes some where and then bring them back when required.
 
@@ -207,6 +208,17 @@ If you have multiple stashes, you can apply and remove a specific stash using:
 git stash pop stash@{2}
 ```
 
+## Git Branches
+To list all the branches in a repo, run:
+```
+git branch
+```
+
+To create a new branch named `dev`, run:
+```sh
+git branch dev
+```
+
 ## Tagging
 
 * It is used to capture a point in history to marked version release of your codebase.
@@ -220,10 +232,17 @@ git tag -d v1.0.0 # Delete local tag
 git push --delete origin tagname # Delete remote tag
 ```
 
+To switch to the new branch named `dev`, run:
+```sh
+git checkout dev
+```
 
+After making changes to the files, you can push those changes by running the following command:
+```sh
+git push -u origin dev
+```
 
-
-
+## Git Merging
 
 
 

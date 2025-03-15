@@ -17,4 +17,18 @@
   - _Staged_: The file has been modified, and the changes have been added to the staging area (also known as the index). These changes are ready to be committed.
   - _Committed_: The file is in the repository's database. It represents the latest committed version of the file.
 - _Pull request_: A pull request is the mechanism used to signal that the commits from one branch are ready to be merged into another branch.
+- _GitHub flow_: It is a lightweight workflow for testing new ideas and collaborate with other team members by using branching, pull requests, and merging. Following walkthrough depicts the GitHub flow and its components:
+  1. Create a separate branch to work on a project so that the changes you made don't affect the `main` branch.
+  2. Always make changes in your branch.
+  3. Create a pull request to ask collaborators for feedback. Pull request review is so valuable that some repositories require an approving review before pull requests can be merged.
+  4. Review and implement your feedback from your collaborator.
+  5. Once you feel great about your changes, it's time to get your pull request approved and merge it into the `main` branch.
+  6. Finally, you can delete your branch. Deleting your branch signals your work on the branch is complete and prevents you or others from accidentally using old branches.
+- _Issues_: GitHub Issues were created to track ideas, feedback, tasks, or bugs for work on GitHub. Issues can be created in various ways, so you can choose the most convenient method for your workflow. Issues can be created from:
+  - Repository
+  - An item in a task list
+  - A note in a project
+  - A comment in an issue or pull request
+  - A specific line of code
+  - A URL query
 - 
