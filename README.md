@@ -123,7 +123,7 @@ gh repo clone <repo-owner>/<repo-name>
 
 ## Git Branches
 To list all the branches in a repo, run:
-```
+```sh
 git branch
 ```
 
@@ -136,6 +136,31 @@ To switch to the new branch named `dev`, run:
 ```sh
 git checkout dev
 ```
+
+To create and checkout to a branch, run:
+```sh
+git checkout -b [branch-name]
+```
+
+To delete a branch, run:
+```sh
+git branch -d [branch-name]
+```
+
+To rename a branch, run:
+```sh
+git branch -m [old-name] [new-name]
+```
+
+A common workflow for developers is to create a branch or a feature, and they need to push their branch upstream to the remote name origin:
+```sh
+git checkout -b my-new-branch
+# ... makes changes to files
+git add .
+git commit -m "my changes"
+git push -u origin my-new-branch
+```
+
 
 After making changes to the files, you can push those changes by running the following command:
 ```sh
@@ -192,6 +217,19 @@ git branch
 To create a new branch named `dev`, run:
 ```sh
 git branch dev
+```
+
+## Tagging
+
+* It is used to capture a point in history to marked version release of your codebase.
+* CI/CD pipelines may be configured to deploy on the presence of a new tag on production branch.
+* Common Git tagging commands:
+```sh
+git tag v1.0.0 # tag a commit
+git push --tags # Push tags to remote
+git checkout v1.0.0 # Checkout codebase at tag
+git tag -d v1.0.0 # Delete local tag
+git push --delete origin tagname # Delete remote tag
 ```
 
 To switch to the new branch named `dev`, run:
